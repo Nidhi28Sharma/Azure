@@ -1,0 +1,10 @@
+name: 'Setup Azure CLI'
+description: 'Set up Azure CLI for use in GitHub Actions'
+runs:
+  using: 'composite'
+  steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+    - name: Set up Azure CLI
+      run: |
+        curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
