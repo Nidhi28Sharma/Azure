@@ -20,9 +20,9 @@ jobs:
 
       - name: Azure Login
         run: az login --service-principal --username ${{ secrets.AZURE_CLIENT_ID }} --password ${{ secrets.AZURE_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
-      
+
       - name: Install Snyk CLI
-        uses: snyk/actions/cli@v1
+        run: npm install -g snyk
 
       - name: Authenticate Snyk
         run: snyk auth ${{ secrets.SNYK_TOKEN }}
@@ -34,7 +34,7 @@ jobs:
         run: terraform plan
 
       - name: Snyk Code Scanning
-        run: snyk monitor
+        run: snyk test
 
       - name: terraform apply
         run: terraform apply -auto-approve
