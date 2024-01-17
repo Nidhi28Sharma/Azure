@@ -7,6 +7,10 @@ on:
       - main
   
 
+permissions:
+      id-token: write
+      # contents: read
+
 jobs:
   deploy_vm:
     runs-on: ubuntu-latest
