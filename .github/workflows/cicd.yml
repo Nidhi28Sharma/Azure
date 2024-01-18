@@ -25,6 +25,7 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
+        auth-type: IDENTITY
 
     - name: Set Azure Subscription
       run: az account set --subscription "${{ secrets.AZURE_CREDENTIALS.subscriptionId }}"
