@@ -22,7 +22,7 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-        run: Connect-Azaccount
+        allow-no-subscriptions: true
 
     - name: Initialize Terraform
       run: terraform init
