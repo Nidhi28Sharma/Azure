@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main  # Change this to the branch you want to trigger the workflow on
+
 jobs:
   terraform:
     runs-on: ubuntu-latest
@@ -22,11 +23,15 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+    - name: Set Azure Subscription
+      run: az account set --subscription "${{ secrets.AZURE_CREDENTIALS.subscriptionId }}"
+
     - name: Initialize Terraform
       run: terraform init
 
     - name: Apply Terraform changes
       run: terraform apply -auto-approve
+
 
 
 
