@@ -80,8 +80,10 @@ jobs:
       #     azcliversion: latest
 
       - name: Azure Login
-        run: az login --service-principal --username ${{ secrets.AZURE_CLIENT_ID }} --password ${{ secrets.AZURE_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
-        run: Connect-Azaccount
+        run: az login 
+      
+      -name: Connect
+      run: Connect-Azaccount
 
       - name: Terraform Init
         run: terraform init
