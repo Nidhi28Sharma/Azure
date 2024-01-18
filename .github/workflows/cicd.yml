@@ -19,8 +19,7 @@ jobs:
 
       - name: Azure Login
         run: az login 
-      - name: Connect
-        run: connect-Azaccount
+      
       
 
       # - name: Azure Login
