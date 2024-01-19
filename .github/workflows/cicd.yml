@@ -38,8 +38,6 @@ jobs:
     - name: Initialize Terraform
       run: terraform init
 
-    - name: Change to Terraform directory
-      run: cd \Snyk-Ci-Cd
 
     - name: Snyk Code Scanning
       run: snyk test
