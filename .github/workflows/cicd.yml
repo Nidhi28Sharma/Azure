@@ -39,10 +39,8 @@ jobs:
       run: terraform init
 
 
-  - name: Snyk Code Scanning
-    working-directory: /Snyk-Ci-Cd
-    run: snyk test
-
+    - name: Snyk Code Scanning
+      run: snyk test
 
     - name: Apply Terraform changes
       run: terraform apply -auto-approve
