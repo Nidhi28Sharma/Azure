@@ -40,8 +40,8 @@ jobs:
 
 
   - name: Snyk Code Scanning
-  working-directory: /Snyk-Ci-Cd
-  run: snyk test
+    working-directory: /Snyk-Ci-Cd
+    run: snyk test
 
 
     - name: Apply Terraform changes
