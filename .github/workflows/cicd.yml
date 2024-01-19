@@ -39,7 +39,7 @@ jobs:
       run: terraform init
 
     - name: Change to Terraform directory
-      run: cd C:\Users\NIDHISHARMA\OneDrive - cloudEQ\Desktop\Snyk-Ci-Cd
+      run: cd \Snyk-Ci-Cd
 
     - name: Snyk Code Scanning
       run: snyk test
