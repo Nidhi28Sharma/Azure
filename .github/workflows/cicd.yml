@@ -44,6 +44,9 @@ jobs:
     - name: Snyk Code Scanning
       run: snyk iac test
 
+    - name : Snyk Report
+      run: snyk report
+
     - name: Apply Terraform changes
       run: terraform apply -auto-approve
 
