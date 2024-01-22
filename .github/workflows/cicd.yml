@@ -41,8 +41,8 @@ jobs:
     # - name: Change to Terraform code directory
     #   run: cd /SNYK-CI-CD
 
-    # - name: Snyk Code Scanning
-    #   run: snyk test
+    - name: Snyk Code Scanning
+      run: snyk iac test
 
     - name: Apply Terraform changes
       run: terraform apply -auto-approve
