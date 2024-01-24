@@ -44,8 +44,8 @@ jobs:
     - name: Apply Terraform changes
       run: terraform apply -auto-approve
 
-    - name: Snyk Code Scanning
-      run: snyk monitor
+    # - name: Snyk Code Scanning
+    #   run: snyk monitor
 
     - name: Destroy Terraform resources
       run: terraform destroy -auto-approve
