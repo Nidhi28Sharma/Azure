@@ -38,9 +38,6 @@ jobs:
     - name: Initialize Terraform
       run: terraform init
 
-    # - name: Change to Terraform code directory
-    #   run: cd /SNYK-CI-CD
-
     - name: Snyk Code Scanning
       run: snyk iac test --severity-threshold=critical
 
