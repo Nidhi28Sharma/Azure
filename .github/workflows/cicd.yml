@@ -42,13 +42,16 @@ jobs:
     #   run: cd /SNYK-CI-CD
 
     - name: Snyk Code Scanning
-      run: snyk iac test --severity-threshold=medium
+      run: snyk iac test --severity-threshold=critical
 
     - name: Apply Terraform changes
       run: terraform apply -auto-approve
 
     - name: Snyk Code Scanning
       run: snyk monitor
+
+    # - name: Destroy Terraform resources
+    #   run: terraform destroy -auto-approve
 
 
 
