@@ -78,7 +78,7 @@ storage_image_reference {
   os_profile {
     computer_name  = "hostname"
     admin_username = "testadmin"
-    # admin_password = "Password1234!"
+    admin_password = "Password1234!"
     
   }
   os_profile_linux_config {
