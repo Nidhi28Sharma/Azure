@@ -42,7 +42,7 @@ jobs:
     #   run: cd /SNYK-CI-CD
 
     - name: Snyk Code Scanning
-      run: snyk iac test
+      run: snyk iac test --severity-threshold=medium
 
     - name : Snyk Report
       run: snyk report

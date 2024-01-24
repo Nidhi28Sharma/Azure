@@ -33,6 +33,8 @@ resource "azurerm_virtual_network" "virtual_net" {
   address_space       = ["10.0.0.0/16"]
 }
 
+
+
 #create a subnet
 resource "azurerm_subnet" "sub1" {
   name= "nidhi-subnet"
