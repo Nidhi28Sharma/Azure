@@ -82,8 +82,8 @@ storage_image_reference {
     
   }
   os_profile_linux_config {
-    # disable_password_authentication = false
-    disable_password_authentication = true
+    disable_password_authentication = false
+    
   }
   tags = {
     environment = "staging"
