@@ -91,3 +91,8 @@ storage_image_reference {
   depends_on = [ azurerm_network_interface.nidhi_interface, azurerm_resource_group.test_resource ]
 
 }
+
+
+username= "abcdefghig"
+password="12342398u3r"
+token="ehuwehuwe382647e23ey23"
