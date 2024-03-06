@@ -93,6 +93,4 @@ storage_image_reference {
 }
 
 
-username= "abcdefghig"
-password="12342398u3r"
-token="ehuwehuwe382647e23ey23"
+
